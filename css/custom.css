@@ -1,0 +1,21 @@
+/* source/css/custom.css */
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 修改Volantis主题颜色 */
+:root {
+    --primary-color: #4CAF50; /* 农学主题绿色 */
+}
+/* 响应式背景 */
+.cover-bg {
+    background-size: cover;
+    background-position: center;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .cover-bg {
+        background-attachment: scroll;
+    }
+}
