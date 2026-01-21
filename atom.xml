@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>无忧乡</title>
+  <icon>https://deepseek.com/favicon.ico</icon>
+  
+  <link href="http://hzauer.com/atom.xml" rel="self"/>
+  
+  <link href="http://hzauer.com/"/>
+  <updated>2026-01-16T14:41:47.802Z</updated>
+  <id>http://hzauer.com/</id>
+  
+  <author>
+    <name>DuKou</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello,19th bit!</title>
+    <link href="http://hzauer.com/2026/01/16/19th/"/>
+    <id>http://hzauer.com/2026/01/16/19th/</id>
+    <published>2026-01-16T14:25:10.000Z</published>
+    <updated>2026-01-16T14:41:47.802Z</updated>
+    
+    <content type="html"><![CDATA[<p>  压抑的复习周，不想学习的俺。<span id="more"></span>今天想起一个诗句，把它改了一下，”学成文物艺，货与资本家。“，感觉好荒诞呀，曾经的炙热的理想最终还是变成了冰冷的RMB。<br>  ai越来越强了，科班感觉也不怎么行了，需要all in了。<br>  睡前原谅一切，睡醒再拥抱这个可爱但不完美的世界。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;  压抑的复习周，不想学习的俺。</summary>
+    
+    
+    
+    
+    <category term="Life" scheme="http://hzauer.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redmi Note 12 Turbo刷类原生系统</title>
+    <link href="http://hzauer.com/2025/09/13/Redmi-Note-12-Turbo%E5%88%B7%E7%B1%BB%E5%8E%9F%E7%94%9F%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://hzauer.com/2025/09/13/Redmi-Note-12-Turbo%E5%88%B7%E7%B1%BB%E5%8E%9F%E7%94%9F%E7%B3%BB%E7%BB%9F/</id>
+    <published>2025-09-13T11:06:56.000Z</published>
+    <updated>2026-01-21T12:28:43.933Z</updated>
+    
+    <content type="html"><![CDATA[<p>  澎湃os3系统更新不久，turbo还没有推送，os2用腻了，于是又想体验毛坯房了(类原生系统)。<span id="more"></span>还是相中之前的evolution x这个类原生，指纹，面部，快充都可以使用，同时它还推出了a16，想体验一波。<br>  第一步就可以说是折磨，把数据都备份下来，图片，视频，聊天记录，还有部分应用的数据，我先是将图片和视频上传到夸克云盘，免费的2t内存，但是上传限速3mb&#x2F;s，还勉强可以，聊天记录照常导入电脑，保险起见我还是全部备份一次到了电脑。<br>  原来之前将线刷包和卡刷包弄混了，在rec里面刷入是卡刷，fastboot sideload刷入才是线刷。搞得前面几次都是刷入后进不了系统，只能又花10分钟官刷一次，就这样周转了7，8次，从下午4点刷到了7点，后面发现不仅是刷入方式错了，同时系统底包一直是os1，应该是os2才能刷evox，然后又尝试了3，4次还是不行，此时已经9点了，然后想着看看小绿书有没有解决办法，看到一个帖子下面说要指定的rec，然后又去下载了orangefox，之前一直用的twrp，直接卡刷成功，wogiao，看evo官网也没有提示要制定rec。真的是需要人指路呀，不然就是无头苍蝇。<br>  然后就是root，但是我已经没有心思了，日后再搞。<br><img src="https://cdn.jsdelivr.net/gh/BoredDream/BlogIMG/blog_imgPXL_20250913_133214144.jpg" alt="爱坤的写真"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;  澎湃os3系统更新不久，turbo还没有推送，os2用腻了，于是又想体验毛坯房了(类原生系统)。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux基础命令学习</title>
+    <link href="http://hzauer.com/2025/08/26/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://hzauer.com/2025/08/26/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</id>
+    <published>2025-08-26T02:17:13.000Z</published>
+    <updated>2026-01-21T11:43:04.319Z</updated>
+    
+    <content type="html"><![CDATA[<p>一.目录切换，展示<br>1.显示当前位置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure><p>2.列出当前目录文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span>    <span class="comment">#不包含隐藏文件</span></span><br><span class="line"><span class="built_in">ls</span> -a <span class="comment">#包含隐藏文件</span></span><br></pre></td></tr></table></figure><span id="more"></span><p>3.进出目录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /folder_name1/folder_name2 <span class="comment">#不局限于当前目录，可以夸目录进入</span></span><br><span class="line"><span class="built_in">cd</span> .. <span class="comment">#返回上级目录</span></span><br><span class="line"><span class="built_in">cd</span> ~  <span class="comment">#返回当前用户分配的根目录</span></span><br><span class="line"><span class="built_in">cd</span> -  <span class="comment">#切换回上一个目录（会循环），用于切换工作区</span></span><br><span class="line"><span class="built_in">cd</span> /  <span class="comment">#到达系统根目录</span></span><br></pre></td></tr></table></figure><p>二.对文件及文件夹进行操作<br>1.创建文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> folder_name || <span class="built_in">mkdir</span> folder_name.text <span class="comment">#都是创建文件夹，不论后缀如何</span></span><br></pre></td></tr></table></figure><p>2.创建文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> file_name <span class="comment">#单纯创建文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;hello , nice to see you!&quot;</span> &gt;file_name <span class="comment">#创建文件的同时写入内容</span></span><br><span class="line"><span class="built_in">cat</span> &gt;file_name <span class="comment">#创建文件后，可以一直写入，ctrl+D 结束写入</span></span><br></pre></td></tr></table></figure><p>3.删除操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -r folder_name <span class="comment">#递归删除文件，最后删除文件夹，对象是文件夹</span></span><br><span class="line"><span class="built_in">rm</span> file_name <span class="comment">#</span></span><br></pre></td></tr></table></figure><p>4.复制操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下为复制文件</span></span><br><span class="line"><span class="built_in">cp</span> haha.text(原本) fname(副本) <span class="comment">#fname存在--fname是文件则覆盖原有内容</span></span><br><span class="line">                               <span class="comment">#       | --fname为folder则进入后生成haha.text</span></span><br><span class="line"></span><br><span class="line">                               <span class="comment">#fname不存在--创建fname为名文件，写入haha.text内容</span></span><br><span class="line"><span class="comment">#下为复制整个文件夹</span></span><br><span class="line"><span class="built_in">cp</span> -r folder1 folder2 </span><br><span class="line"><span class="comment">#folder1必须存在，folder2非必需</span></span><br><span class="line"><span class="comment">#folder2存在，则将folder1复制在folder2目录下；不存在，则复制一个folder1重命名为folder2                      </span></span><br></pre></td></tr></table></figure><p>5.移动操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> old.text new.text <span class="comment">#用来重命名</span></span><br><span class="line"><span class="built_in">mv</span> old.text /~/username/... <span class="comment">#移动到指定目录</span></span><br></pre></td></tr></table></figure><p>6.读取文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> haha.text <span class="comment">#连接并打印文件内容（小文件）</span></span><br><span class="line">less haha.text <span class="comment">#专门的页面浏览文件，可以上下翻页（大文件）</span></span><br></pre></td></tr></table></figure><p>三.其他操作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man <span class="built_in">ls</span> <span class="comment">#大喊&quot;man!&quot;,即可查看更多指令</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;一.目录切换，展示&lt;br&gt;1.显示当前位置&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;pwd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2.列出当前目录文件&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt;    &lt;span class=&quot;comment&quot;&gt;#不包含隐藏文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -a &lt;span class=&quot;comment&quot;&gt;#包含隐藏文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="杂学" scheme="http://hzauer.com/categories/%E6%9D%82%E5%AD%A6/"/>
+    
+    
+    <category term="Linux" scheme="http://hzauer.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github+jsdelivr+PicGo搭建图床</title>
+    <link href="http://hzauer.com/2025/08/23/github-jsdelivr-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
+    <id>http://hzauer.com/2025/08/23/github-jsdelivr-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</id>
+    <published>2025-08-23T03:48:14.000Z</published>
+    <updated>2026-01-21T11:42:46.424Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、获取github token（给予picgo上传权限）<br>1.创建github仓库BlogIMG</p><span id="more"></span><p>2.进入主页右上角-&gt;setting-&gt;developer settings-&gt;personal token(classic)-&gt;Creat new tokens(classic),保存好只显示一次<br>二、配置PicGo<br>1.下载对应版本PicGo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Molunerfinn/PicGo/releases</span><br></pre></td></tr></table></figure><p>2.进入点击侧边栏图床设置，选择github，新建，图床配置名自定义，仓库名github名字&#x2F;token对应仓库名，token,路径自定义，自定义域名<a href="https://cdn.jsdelivr.net/gh/%E8%87%AA%E5%B7%B1github%E5%90%8D%E5%AD%97/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/自己github名字/仓库名</a><br>3.可以开始用了！直接在picgo上传图片，得到的链接直接插入博客markdown里面<br><img src="https://cdn.jsdelivr.net/gh/BoredDream/BlogIMG/blog_img20181017205531_EXSzB.jpeg" alt="金木研，最帅的男人！"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;一、获取github token（给予picgo上传权限）&lt;br&gt;1.创建github仓库BlogIMG&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客搭建及diy" scheme="http://hzauer.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8Adiy/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的第二篇文章</title>
+    <link href="http://hzauer.com/2025/08/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://hzauer.com/2025/08/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2025-08-08T13:42:37.000Z</published>
+    <updated>2026-01-21T11:42:23.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备工具：1.nodejs（自带npm）<br>         2.git<br>         3.hexo-cli</p><span id="more"></span><p>工具下载：1.node:<a href="https://nodejs.org/">https://nodejs.org</a><br>         2.git:<a href="https://git-scm.com/">https://git-scm.com</a><br>         3.hexo:npm install -g hexo-cli(cmd运行)</p><p>github仓库准备:<br>         1.创建本名仓库<username>.github.io<br>         2.勾选”Initialize this repository with a README”<br>         3.Creat</p><p>本地文件夹准备:<br>         1.创建名为blog的空文件夹<br>         2.在当前文件夹目录下运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init .</span><br></pre></td></tr></table></figure><p>配置git并连接到github：<br>         1.设置用户和用户邮箱：git config –global user.name “Github用户名(可以是别的名字)”<br>                             git config –global user.email “Github用户邮箱(也可以改别的)”<br>         2.生成SSH密钥: ssh-keygen -t rsa -C “同上邮箱”<br>         3.将密钥添加到github settings -&gt; SSH keys<br>         4.测试连接：ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">git@github.com</a><br>            出现”hello,&lt;github用户名&gt;…”说明成功</p><p>修改hexo并配置文件_config.yaml：<br>         1.找到deploy部分，修改为:<br>         deploy:<br>            type:git<br>            repo:<username>.github.io<br>            branch:main<br>         2.在blog目录下安装部署器依赖 –&gt; npm install hexo -deployer-git –save</p><p>选择喜欢的主题(以volantis为例):<br>         1.修改config.yaml中theme –&gt;volantis<br>         2.终端中输入–&gt; npm i hexo-theme-volantis</p><p>主要几个指令:<br>         1.hexo clean –&gt;清除缓存文件(db.json)和public文件夹中已生成的静态文件(避免缓存干扰)<br>         2.hexo g –&gt;将markdown文件编译成静态文件并放到public文件夹<br>         3.hexo s –&gt;相当于hexo g生成了一个临时静态文件，然后可以实时在浏览本地博客，用于预览效果满意后再部署<br>         4.hexo d –&gt;将public文件夹中文件部署到Github<br>         5.连招:hexo new post “title” –&gt; hexo s(实时编写预览) –&gt;hexo clean &amp;&amp; hexo g -d(先生成静态文件后部署)</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;准备工具：1.nodejs（自带npm）&lt;br&gt;         2.git&lt;br&gt;         3.hexo-cli&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客搭建及diy" scheme="http://hzauer.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8Adiy/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习发布博客的流程</title>
+    <link href="http://hzauer.com/2025/08/07/First_Post/"/>
+    <id>http://hzauer.com/2025/08/07/First_Post/</id>
+    <published>2025-08-07T05:14:52.000Z</published>
+    <updated>2026-01-16T14:27:19.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>sequenceDiagram<br>    本地写作-&gt;&gt;生成静态文件: hexo g<br>    生成静态文件-&gt;&gt;GitHub仓库: hexo d<br>    GitHub仓库-&gt;&gt;在线网站: 自动部署<br>    在线网站–&gt;&gt;读者: 通过浏览器访问</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建及diy" scheme="http://hzauer.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8Adiy/"/>
+    
+    
+  </entry>
+  
+</feed>
