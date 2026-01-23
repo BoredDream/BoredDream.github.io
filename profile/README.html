@@ -1,0 +1,106 @@
+<h1 id="个人资料页面更新指南"><a href="#个人资料页面更新指南" class="headerlink" title="个人资料页面更新指南"></a>个人资料页面更新指南</h1><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">source/profile/</span><br><span class="line">├── index.md          # 主页面内容（包含HTML、CSS、JS）</span><br><span class="line">└── README.md         # 本指南文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1-更新基本信息"><a href="#1-更新基本信息" class="headerlink" title="1. 更新基本信息"></a>1. 更新基本信息</h3><p>编辑 <code>source/profile/index.md</code> 文件，修改以下部分：</p>
+<h4 id="头像和姓名（第11-13行附近）"><a href="#头像和姓名（第11-13行附近）" class="headerlink" title="头像和姓名（第11-13行附近）"></a>头像和姓名（第11-13行附近）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://deepseek.com/favicon.ico&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;DuKou&quot;</span> <span class="attr">class</span>=<span class="string">&quot;avatar-img&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;profile-name&quot;</span>&gt;</span>DuKou<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;profile-tagline&quot;</span>&gt;</span>CS学生 | 博客作者 | 技术爱好者<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="基本信息卡片（第23-40行附近）"><a href="#基本信息卡片（第23-40行附近）" class="headerlink" title="基本信息卡片（第23-40行附近）"></a>基本信息卡片（第23-40行附近）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-item&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;info-label&quot;</span>&gt;</span>职业<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;info-value&quot;</span>&gt;</span>计算机科学学生<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-item&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;info-label&quot;</span>&gt;</span>地点<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;info-value&quot;</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改技能标签"><a href="#2-修改技能标签" class="headerlink" title="2. 修改技能标签"></a>2. 修改技能标签</h3><p>在”技能标签”部分（第45-55行附近）添加或删除标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;skill-tags&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;skill-tag&quot;</span>&gt;</span>编程<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;skill-tag&quot;</span>&gt;</span>Linux<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;skill-tag&quot;</span>&gt;</span>Hexo<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 添加更多标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-更新关于我内容"><a href="#3-更新关于我内容" class="headerlink" title="3. 更新关于我内容"></a>3. 更新关于我内容</h3><p>在”关于我”部分（第60-70行附近）修改个人简介：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;about-content&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>你好！我是DuKou，一名对计算机科学充满热情的学生。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>目前正在学习各种编程技术...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 修改或添加段落 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-防爬虫邮箱设置"><a href="#4-防爬虫邮箱设置" class="headerlink" title="4. 防爬虫邮箱设置"></a>4. 防爬虫邮箱设置</h3><p>邮箱地址在JavaScript中配置（第150行附近）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> encodedEmail = <span class="string">&#x27;boreddream[at]qq[dot]com&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>格式说明</strong>：</p>
+<ul>
+<li>使用 <code>[at]</code> 代替 <code>@</code></li>
+<li>使用 <code>[dot]</code> 代替 <code>.</code></li>
+<li>示例：<code>username[at]domain[dot]com</code> → <code>username@domain.com</code></li>
+</ul>
+<h2 id="样式自定义"><a href="#样式自定义" class="headerlink" title="样式自定义"></a>样式自定义</h2><h3 id="颜色调整"><a href="#颜色调整" class="headerlink" title="颜色调整"></a>颜色调整</h3><p>在CSS部分（第7行开始）修改颜色变量：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.profile-header</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#667eea</span> <span class="number">0%</span>, <span class="number">#764ba2</span> <span class="number">100%</span>);</span><br><span class="line">  <span class="comment">/* 修改渐变颜色 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.card-title</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#2c3e50</span>; <span class="comment">/* 修改标题颜色 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="布局调整"><a href="#布局调整" class="headerlink" title="布局调整"></a>布局调整</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 修改卡片间距 */</span></span><br><span class="line"><span class="selector-class">.profile-content</span> &#123;</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 修改头像大小 */</span></span><br><span class="line"><span class="selector-class">.avatar-img</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">120px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><p>页面已内置响应式设计，支持以下断点：</p>
+<h3 id="移动端-768px"><a href="#移动端-768px" class="headerlink" title="移动端 (&lt; 768px)"></a>移动端 (&lt; 768px)</h3><ul>
+<li>单列布局</li>
+<li>缩小头像尺寸</li>
+<li>调整内边距</li>
+</ul>
+<h3 id="平板-768px-1024px"><a href="#平板-768px-1024px" class="headerlink" title="平板 (768px - 1024px)"></a>平板 (768px - 1024px)</h3><ul>
+<li>自适应网格布局</li>
+<li>中等尺寸元素</li>
+</ul>
+<h3 id="桌面-1024px"><a href="#桌面-1024px" class="headerlink" title="桌面 (&gt; 1024px)"></a>桌面 (&gt; 1024px)</h3><ul>
+<li>多列网格布局</li>
+<li>完整尺寸元素</li>
+</ul>
+<h2 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h2><h3 id="邮箱保护功能"><a href="#邮箱保护功能" class="headerlink" title="邮箱保护功能"></a>邮箱保护功能</h3><ol>
+<li><strong>防爬虫</strong>：邮箱使用编码格式存储</li>
+<li><strong>动态解码</strong>：页面加载后JavaScript解码显示</li>
+<li><strong>复制功能</strong>：点击邮箱地址可复制到剪贴板</li>
+<li><strong>邮件链接</strong>：点击”邮箱”按钮可发送邮件</li>
+</ol>
+<h3 id="交互效果"><a href="#交互效果" class="headerlink" title="交互效果"></a>交互效果</h3><ol>
+<li><strong>悬停动画</strong>：卡片和标签有悬停效果</li>
+<li><strong>加载状态</strong>：邮箱地址有加载动画</li>
+<li><strong>点击反馈</strong>：复制成功有视觉反馈</li>
+</ol>
+<h2 id="导航菜单配置"><a href="#导航菜单配置" class="headerlink" title="导航菜单配置"></a>导航菜单配置</h2><p>个人资料页面已集成到网站导航中：</p>
+<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source/_data/next.yml          # 菜单配置</span><br><span class="line">source/_data/languages/zh-CN.yml # 中文翻译</span><br></pre></td></tr></table></figure>
+
+<h3 id="菜单项"><a href="#菜单项" class="headerlink" title="菜单项"></a>菜单项</h3><ul>
+<li><strong>路径</strong>: <code>/profile/</code></li>
+<li><strong>图标</strong>: <code>fa fa-user</code> (Font Awesome用户图标)</li>
+<li><strong>标签</strong>: “个人资料” (如需中文显示，需手动修改主题语言文件)</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="Q-如何更换头像？"><a href="#Q-如何更换头像？" class="headerlink" title="Q: 如何更换头像？"></a>Q: 如何更换头像？</h3><p>A: 修改 <code>index.md</code> 中头像图片的 <code>src</code> 属性，支持：</p>
+<ul>
+<li>绝对URL（如 <code>https://example.com/avatar.jpg</code>）</li>
+<li>相对路径（如 <code>/images/avatar.jpg</code>）</li>
+<li>建议尺寸：120×120像素，正方形</li>
+</ul>
+<h3 id="Q-技能标签显示不整齐？"><a href="#Q-技能标签显示不整齐？" class="headerlink" title="Q: 技能标签显示不整齐？"></a>Q: 技能标签显示不整齐？</h3><p>A: 技能标签使用Flexbox布局，会自动换行。如需调整：<br>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.skill-tags</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: center; <span class="comment">/* 居中显示 */</span></span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">10px</span>; <span class="comment">/* 调整间距 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Q-移动端显示有问题？"><a href="#Q-移动端显示有问题？" class="headerlink" title="Q: 移动端显示有问题？"></a>Q: 移动端显示有问题？</h3><p>A: 检查CSS媒体查询部分，确保使用相对单位（如 <code>%</code>、<code>rem</code>）。</p>
+<h3 id="Q-邮箱功能不工作？"><a href="#Q-邮箱功能不工作？" class="headerlink" title="Q: 邮箱功能不工作？"></a>Q: 邮箱功能不工作？</h3><p>A: 检查：</p>
+<ol>
+<li>JavaScript是否启用</li>
+<li>邮箱格式是否正确（使用 <code>[at]</code> 和 <code>[dot]</code>）</li>
+<li>控制台是否有错误信息</li>
+</ol>
+<h3 id="Q-导航菜单显示英文”profile”而不是中文”个人资料”？"><a href="#Q-导航菜单显示英文”profile”而不是中文”个人资料”？" class="headerlink" title="Q: 导航菜单显示英文”profile”而不是中文”个人资料”？"></a>Q: 导航菜单显示英文”profile”而不是中文”个人资料”？</h3><p>A: 这是由于Next主题是git子模块。如需中文显示，请手动修改：<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑主题语言文件</span></span><br><span class="line">vim themes/next/languages/zh-CN.yml</span><br><span class="line"><span class="comment"># 在menu部分添加：profile: 个人资料</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Q-页面样式与主题不协调？"><a href="#Q-页面样式与主题不协调？" class="headerlink" title="Q: 页面样式与主题不协调？"></a>Q: 页面样式与主题不协调？</h3><p>A: 已修复。当前页面使用与Next主题Muse方案一致的配色：</p>
+<ul>
+<li>头像区域: #222 深色背景</li>
+<li>卡片背景: #f8f9fa 浅灰色</li>
+<li>文字颜色: #555 主题文字色</li>
+<li>链接颜色: #0684bd 主题蓝色</li>
+</ul>
+<h3 id="Q-HTML标签被转义显示（如显示为）？"><a href="#Q-HTML标签被转义显示（如显示为）？" class="headerlink" title="Q: HTML标签被转义显示（如显示为&lt;div&gt;）？"></a>Q: HTML标签被转义显示（如显示为&lt;div&gt;）？</h3><p>A: 已修复。使用  标签确保HTML正常渲染。</p>
+<h2 id="维护建议"><a href="#维护建议" class="headerlink" title="维护建议"></a>维护建议</h2><h3 id="定期更新"><a href="#定期更新" class="headerlink" title="定期更新"></a>定期更新</h3><ol>
+<li><strong>技能标签</strong>：根据学习进度更新</li>
+<li><strong>个人简介</strong>：反映当前状态和兴趣</li>
+<li><strong>社交链接</strong>：保持链接有效性</li>
+</ol>
+<h3 id="测试检查"><a href="#测试检查" class="headerlink" title="测试检查"></a>测试检查</h3><ol>
+<li><strong>多设备测试</strong>：手机、平板、桌面</li>
+<li><strong>浏览器兼容</strong>：Chrome、Firefox、Safari</li>
+<li><strong>功能验证</strong>：邮箱复制、链接跳转</li>
+</ol>
+<h3 id="备份建议"><a href="#备份建议" class="headerlink" title="备份建议"></a>备份建议</h3><ol>
+<li>修改前备份 <code>index.md</code> 文件</li>
+<li>记录重要的样式修改</li>
+<li>定期检查页面功能</li>
+</ol>
+<h2 id="技术支持"><a href="#技术支持" class="headerlink" title="技术支持"></a>技术支持</h2><p>如有问题，请参考：</p>
+<ul>
+<li><a href="https://theme-next.org/">Next主题文档</a></li>
+<li><a href="https://hexo.io/docs/">Hexo文档</a></li>
+<li>检查浏览器开发者工具控制台</li>
+</ul>
+<hr>
+<p><strong>最后更新</strong>: 2026年1月22日<br><strong>版本</strong>: 1.0</p>

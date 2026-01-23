@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,zh-TW,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hzauer.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="&#x2F;* 个人资料页面样式 *&#x2F; .profile-container {   max-width: 1200px;   margin: 0 auto;   padding: 20px;   font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;He">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About me">
+<meta property="og:url" content="http://hzauer.com/profile/index.html">
+<meta property="og:site_name" content="无忧乡">
+<meta property="og:description" content="&#x2F;* 个人资料页面样式 *&#x2F; .profile-container {   max-width: 1200px;   margin: 0 auto;   padding: 20px;   font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;He">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/BoredDream/BlogIMG/main/%E9%87%91%E6%9C%A8.jpeg">
+<meta property="article:published_time" content="2026-01-22T10:14:23.000Z">
+<meta property="article:modified_time" content="2026-01-23T02:47:03.011Z">
+<meta property="article:author" content="DuKou">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Thinking">
+<meta property="article:tag" content="Wondering">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/BoredDream/BlogIMG/main/%E9%87%91%E6%9C%A8.jpeg">
+
+<link rel="canonical" href="http://hzauer.com/profile/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>About me | 无忧乡
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="无忧乡" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">无忧乡</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-profile">
+
+    <a href="/profile/" rel="section"><i class="fa fa-user fa-fw"></i>个人资料</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">About me
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <style>
+/* 个人资料页面样式 */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #555; /* 主题文字颜色 */
+}
+
+/* 头像区域 */
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: #222; /* 与主题一致的深色背景 */
+  border-radius: 12px; /* 调整为与主题一致的圆角 */
+  color: #f5f5f5; /* 浅灰色文字，提高可读性 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 更柔和的阴影 */
+  border: 1px solid #333; /* 添加边框增强层次感 */
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(245, 245, 245, 0.4); /* 使用与文字一致的颜色 */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avatar-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(245, 245, 245, 0.2);
+}
+
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
+}
+
+.profile-tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin: 0;
+  font-weight: 400;
+  color: #ddd;
+}
+
+/* 主要内容区域 */
+.profile-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 20px;
+}
+
+/* 卡片样式 */
+.profile-card {
+  background: #f8f9fa; /* 浅灰色背景，与主题卡片背景一致 */
+  border-radius: 8px; /* 调整为与主题一致的圆角 */
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* 更柔和的阴影 */
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef; /* 更明显的边框 */
+}
+
+.profile-card:hover {
+  transform: translateY(-3px); /* 更温和的悬停效果 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: #dee2e6; /* 悬停时边框颜色变化 */
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  color: #222; /* 使用主题的深色文字 */
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef; /* 与卡片边框一致的颜色 */
+}
+
+/* 基本信息网格 */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #6c757d; /* 更柔和的灰色 */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #222; /* 使用主题深色 */
+  font-weight: 500;
+}
+
+.info-value a {
+  color: #0684bd; /* 使用主题蓝色 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-value a:hover {
+  color: #055a8c; /* 深一点的蓝色 */
+  text-decoration: underline;
+}
+
+/* 技能标签 */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: #fff; /* 白色背景 */
+  color: #495057;
+  padding: 6px 14px;
+  border-radius: 16px; /* 稍微小一点的圆角 */
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border-color: #adb5bd;
+}
+
+/* 关于我内容 */
+.about-content {
+  line-height: 1.8; /* 增加行高，提高可读性 */
+  color: #555;
+  font-size: 0.95rem; /* 稍微小一点的字体 */
+}
+
+.about-content p {
+  margin: 0 0 12px 0;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* 社交链接 */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #fff; /* 白色背景 */
+  border-radius: 6px; /* 更小的圆角 */
+  color: #495057;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #dee2e6;
+}
+
+.social-link:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  color: #222; /* 使用主题深色 */
+  border-color: #adb5bd;
+}
+
+.social-link i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+  
+  .profile-header {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+  
+  .avatar-img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+  
+  .profile-tagline {
+    font-size: 1rem;
+  }
+  
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  
+  .profile-card {
+    padding: 18px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+  }
+  
+  .info-value {
+    font-size: 0.95rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .social-link {
+    justify-content: center;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 15px 10px;
+    margin-bottom: 25px;
+  }
+  
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+  
+  .profile-name {
+    font-size: 1.6rem;
+  }
+  
+  .profile-tagline {
+    font-size: 0.9rem;
+  }
+  
+  .profile-card {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  
+  .skill-tags {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .skill-tag {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .about-content {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+}
+
+/* 邮箱加载状态 */
+#email-placeholder {
+  color: #6c757d;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+#email-placeholder.loading {
+  animation: pulse 1.5s infinite;
+}
+
+#email-placeholder:hover {
+  color: #495057;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* 页面加载动画 */
+.profile-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+
+<div class="profile-container">
+  <!-- 头像和基本信息区域 -->
+  <div class="profile-header">
+    <div class="profile-avatar">
+      <img src="https://raw.githubusercontent.com/BoredDream/BlogIMG/main/金木.jpeg" alt="DuKou" class="avatar-img">
+      <h1 class="profile-name">DuKou</h1>
+      <p class="profile-tagline">CS学生 | 博客作者 | AI爱好者</p>
+    </div>
+  </div>
+
+  <!-- 主要内容区域 -->
+  <div class="profile-content">
+    <!-- 基本信息卡片 -->
+    <div class="profile-card">
+      <h2 class="card-title">基本信息</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">职业</span>
+          <span class="info-value">计算机科学学生</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">地点</span>
+          <span class="info-value">湖北</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">邮箱</span>
+          <span class="info-value" id="email-placeholder">加载中...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">GitHub</span>
+          <span class="info-value">
+            <a href="https://github.com/BoredDream" target="_blank" rel="noopener">BoredDream</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技能标签区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">技能标签</h2>
+      <div class="skill-tags">
+        <span class="skill-tag">Recreational Coder</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">Markdown</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Shell Script</span>
+      </div>
+    </div>
+
+    <!-- 关于我区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">关于我</h2>
+      <div class="about-content">
+        <p>你好,我是DuKou，一名对计算机技术充满热情的大二学生。</p>
+        <p>目前正在学习各种编程技术，特别喜欢探索Linux系统、AI辅助开发和开源工具。通过这个博客记录我的学习历程、技术思考和日常碎碎念。</p>
+        <p>我相信技术应该服务于人，希望通过不断学习，能够创造出有价值的东西。除了编程，我也喜欢阅读、写作和探索新技术趋势。</p>
+        <p>欢迎通过GitHub或邮箱与我交流！</p>
+      </div>
+    </div>
+
+    <!-- 社交链接区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">社交链接</h2>
+      <div class="social-links">
+        <a href="https://github.com/BoredDream" class="social-link" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="#" class="social-link" id="email-link">
+          <i class="fas fa-envelope"></i>
+          <span>邮箱</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// 防爬虫邮箱处理
+document.addEventListener('DOMContentLoaded', function() {
+  // 邮箱配置（使用防爬虫格式）
+  const encodedEmail = '3362107093[at]qq[dot]com';
+  
+  // 解码邮箱函数
+  function decodeEmail(encoded) {
+    return encoded
+      .replace(/\[at\]/g, '@')
+      .replace(/\[dot\]/g, '.');
+  }
+  
+  // 获取DOM元素
+  const emailPlaceholder = document.getElementById('email-placeholder');
+  const emailLink = document.getElementById('email-link');
+  
+  // 解码真实邮箱
+  const realEmail = decodeEmail(encodedEmail);
+  
+  // 显示邮箱（延迟显示以增强防爬虫效果）
+  setTimeout(function() {
+    if (emailPlaceholder) {
+      emailPlaceholder.textContent = realEmail;
+      emailPlaceholder.classList.remove('loading');
+    }
+    
+    // 设置邮箱链接
+    if (emailLink) {
+      emailLink.href = 'mailto:' + realEmail;
+      emailLink.addEventListener('click', function(e) {
+        // 添加点击确认（可选）
+        if (!confirm('确定要发送邮件到 ' + realEmail + ' 吗？')) {
+          e.preventDefault();
+        }
+      });
+    }
+  }, 1000); // 1秒延迟
+  
+  // 添加复制邮箱功能
+  emailPlaceholder.addEventListener('click', function() {
+    navigator.clipboard.writeText(realEmail).then(function() {
+      const originalText = emailPlaceholder.textContent;
+      emailPlaceholder.textContent = '已复制到剪贴板！';
+      emailPlaceholder.style.color = '#27ae60';
+      
+      setTimeout(function() {
+        emailPlaceholder.textContent = originalText;
+        emailPlaceholder.style.color = '';
+      }, 2000);
+    }).catch(function(err) {
+      console.error('复制失败:', err);
+      alert('复制失败，请手动复制邮箱地址');
+    });
+  });
+  
+  // 添加复制提示
+  emailPlaceholder.title = '点击复制邮箱地址';
+  emailPlaceholder.style.cursor = 'pointer';
+  
+  // 初始显示加载状态
+  emailPlaceholder.classList.add('loading');
+});
+
+// 防止右键查看源代码（增强保护）
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.id === 'email-placeholder' || e.target.id === 'email-link') {
+    e.preventDefault();
+    alert('邮箱地址已受保护，请通过点击复制功能获取');
+  }
+});
+
+// 防止键盘快捷键查看源代码
+document.addEventListener('keydown', function(e) {
+  // 阻止 Ctrl+U 查看源代码
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+  }
+  
+  // 阻止 F12 开发者工具
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+});
+</script>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">DuKou</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">技能标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text">关于我</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.4.</span> <span class="nav-text">社交链接</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DuKou</p>
+  <div class="site-description" itemprop="description">记录着农专CS生思考，学习和碎碎念的一隅~~</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DuKou</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">1k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
