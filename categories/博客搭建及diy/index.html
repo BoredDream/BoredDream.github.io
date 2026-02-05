@@ -405,6 +405,117 @@
   
 
   
+<!-- 移动端菜单性能优化脚本 -->
+<script>
+/* 移动端菜单性能优化脚本 */
+/* 覆盖默认的菜单切换动画 */
 
+(function() {
+  'use strict';
+  
+  // 检测移动端
+  function isMobile() {
+    return window.innerWidth <= 767;
+  }
+  
+  // 优化菜单切换函数
+  function optimizeMenuToggle() {
+    var toggleBtn = document.querySelector('.site-nav-toggle .toggle');
+    if (!toggleBtn) return;
+    
+    // 移除原有事件监听器
+    var newToggle = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(newToggle, toggleBtn);
+    
+    // 添加优化后的事件监听器
+    newToggle.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      var siteNav = document.querySelector('.site-nav');
+      if (!siteNav) return;
+      
+      // 切换关闭状态
+      this.classList.toggle('toggle-close');
+      
+      if (isMobile()) {
+        // 移动端：使用CSS transition，禁用Velocity.js
+        siteNav.style.transition = 'max-height 0.3s ease, opacity 0.3s ease';
+        
+        if (siteNav.classList.contains('site-nav-on')) {
+          // 关闭菜单
+          siteNav.style.maxHeight = '0';
+          siteNav.style.opacity = '0';
+          setTimeout(function() {
+            siteNav.classList.remove('site-nav-on');
+            siteNav.style.transition = '';
+            siteNav.style.maxHeight = '';
+            siteNav.style.opacity = '';
+          }, 300);
+        } else {
+          // 打开菜单
+          siteNav.classList.add('site-nav-on');
+          // 触发重排确保transition生效
+          siteNav.offsetHeight;
+          siteNav.style.maxHeight = '80vh';
+          siteNav.style.opacity = '1';
+          setTimeout(function() {
+            siteNav.style.transition = '';
+            siteNav.style.maxHeight = '';
+            siteNav.style.opacity = '';
+          }, 300);
+        }
+      } else {
+        // 桌面端：保持原有行为
+        siteNav.classList.toggle('site-nav-on');
+      }
+    });
+  }
+  
+  // 优化移动端滚动性能
+  function optimizeMobileScroll() {
+    if (!isMobile()) return;
+    
+    // 优化菜单项触摸反馈
+    var menuItems = document.querySelectorAll('.menu-item a');
+    menuItems.forEach(function(item) {
+      item.style.webkitTapHighlightColor = 'rgba(0, 0, 0, 0.1)';
+      item.style.tapHighlightColor = 'rgba(0, 0, 0, 0.1)';
+    });
+    
+    // 优化菜单容器滚动
+    var siteNav = document.querySelector('.site-nav');
+    if (siteNav) {
+      siteNav.style.webkitOverflowScrolling = 'touch';
+      siteNav.style.overflowScrolling = 'touch';
+    }
+  }
+  
+  // 页面加载完成后执行优化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        optimizeMenuToggle();
+        optimizeMobileScroll();
+      }, 100);
+    });
+  } else {
+    setTimeout(function() {
+      optimizeMenuToggle();
+      optimizeMobileScroll();
+    }, 100);
+  }
+  
+  // 窗口大小改变时重新检测
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      optimizeMenuToggle();
+      optimizeMobileScroll();
+    }, 250);
+  });
+})();
+</script>
 </body>
 </html>

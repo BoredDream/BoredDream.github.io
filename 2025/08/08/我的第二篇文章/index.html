@@ -231,7 +231,7 @@
 <p>本地文件夹准备:<br>         1.创建名为blog的空文件夹<br>         2.在当前文件夹目录下运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init .</span><br></pre></td></tr></table></figure>
 
-<p>配置git并连接到github：<br>         1.设置用户和用户邮箱：git config –global user.name “Github用户名(可以是别的名字)”<br>                             git config –global user.email “Github用户邮箱(也可以改别的)”<br>         2.生成SSH密钥: ssh-keygen -t rsa -C “同上邮箱”<br>         3.将密钥添加到github settings -&gt; SSH keys<br>         4.测试连接：ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;">git@github.com</a><br>            出现”hello,&lt;github用户名&gt;…”说明成功</p>
+<p>配置git并连接到github：<br>         1.设置用户和用户邮箱：git config –global user.name “Github用户名(可以是别的名字)”<br>                             git config –global user.email “Github用户邮箱(也可以改别的)”<br>         2.生成SSH密钥: ssh-keygen -t rsa -C “同上邮箱”<br>         3.将密钥添加到github settings -&gt; SSH keys<br>         4.测试连接：ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">git@github.com</a><br>            出现”hello,&lt;github用户名&gt;…”说明成功</p>
 <p>修改hexo并配置文件_config.yaml：<br>         1.找到deploy部分，修改为:<br>         deploy:<br>            type:git<br>            repo:<username>.github.io<br>            branch:main<br>         2.在blog目录下安装部署器依赖 –&gt; npm install hexo -deployer-git –save</p>
 <p>选择喜欢的主题(以volantis为例):<br>         1.修改config.yaml中theme –&gt;volantis<br>         2.终端中输入–&gt; npm i hexo-theme-volantis</p>
 <p>主要几个指令:<br>         1.hexo clean –&gt;清除缓存文件(db.json)和public文件夹中已生成的静态文件(避免缓存干扰)<br>         2.hexo g –&gt;将markdown文件编译成静态文件并放到public文件夹<br>         3.hexo s –&gt;相当于hexo g生成了一个临时静态文件，然后可以实时在浏览本地博客，用于预览效果满意后再部署<br>         4.hexo d –&gt;将public文件夹中文件部署到Github<br>         5.连招:hexo new post “title” –&gt; hexo s(实时编写预览) –&gt;hexo clean &amp;&amp; hexo g -d(先生成静态文件后部署)</p>
@@ -428,6 +428,117 @@
   
 
   
+<!-- 移动端菜单性能优化脚本 -->
+<script>
+/* 移动端菜单性能优化脚本 */
+/* 覆盖默认的菜单切换动画 */
 
+(function() {
+  'use strict';
+  
+  // 检测移动端
+  function isMobile() {
+    return window.innerWidth <= 767;
+  }
+  
+  // 优化菜单切换函数
+  function optimizeMenuToggle() {
+    var toggleBtn = document.querySelector('.site-nav-toggle .toggle');
+    if (!toggleBtn) return;
+    
+    // 移除原有事件监听器
+    var newToggle = toggleBtn.cloneNode(true);
+    toggleBtn.parentNode.replaceChild(newToggle, toggleBtn);
+    
+    // 添加优化后的事件监听器
+    newToggle.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      var siteNav = document.querySelector('.site-nav');
+      if (!siteNav) return;
+      
+      // 切换关闭状态
+      this.classList.toggle('toggle-close');
+      
+      if (isMobile()) {
+        // 移动端：使用CSS transition，禁用Velocity.js
+        siteNav.style.transition = 'max-height 0.3s ease, opacity 0.3s ease';
+        
+        if (siteNav.classList.contains('site-nav-on')) {
+          // 关闭菜单
+          siteNav.style.maxHeight = '0';
+          siteNav.style.opacity = '0';
+          setTimeout(function() {
+            siteNav.classList.remove('site-nav-on');
+            siteNav.style.transition = '';
+            siteNav.style.maxHeight = '';
+            siteNav.style.opacity = '';
+          }, 300);
+        } else {
+          // 打开菜单
+          siteNav.classList.add('site-nav-on');
+          // 触发重排确保transition生效
+          siteNav.offsetHeight;
+          siteNav.style.maxHeight = '80vh';
+          siteNav.style.opacity = '1';
+          setTimeout(function() {
+            siteNav.style.transition = '';
+            siteNav.style.maxHeight = '';
+            siteNav.style.opacity = '';
+          }, 300);
+        }
+      } else {
+        // 桌面端：保持原有行为
+        siteNav.classList.toggle('site-nav-on');
+      }
+    });
+  }
+  
+  // 优化移动端滚动性能
+  function optimizeMobileScroll() {
+    if (!isMobile()) return;
+    
+    // 优化菜单项触摸反馈
+    var menuItems = document.querySelectorAll('.menu-item a');
+    menuItems.forEach(function(item) {
+      item.style.webkitTapHighlightColor = 'rgba(0, 0, 0, 0.1)';
+      item.style.tapHighlightColor = 'rgba(0, 0, 0, 0.1)';
+    });
+    
+    // 优化菜单容器滚动
+    var siteNav = document.querySelector('.site-nav');
+    if (siteNav) {
+      siteNav.style.webkitOverflowScrolling = 'touch';
+      siteNav.style.overflowScrolling = 'touch';
+    }
+  }
+  
+  // 页面加载完成后执行优化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        optimizeMenuToggle();
+        optimizeMobileScroll();
+      }, 100);
+    });
+  } else {
+    setTimeout(function() {
+      optimizeMenuToggle();
+      optimizeMobileScroll();
+    }, 100);
+  }
+  
+  // 窗口大小改变时重新检测
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      optimizeMenuToggle();
+      optimizeMobileScroll();
+    }, 250);
+  });
+})();
+</script>
 </body>
 </html>
