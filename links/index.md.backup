@@ -1,0 +1,317 @@
+---
+title: 友情链接
+date: 2026-01-21 21:35:16
+comments: false
+sidebar: false
+---
+
+# 友情链接
+
+欢迎来到友链页面！这里是我收藏的一些优质网站和资源，也欢迎交换友链。
+
+## 我的信息
+
+- **网站名称**: 无忧乡
+- **网站地址**: http://hzauer.com
+- **网站描述**: 记录着农专CS生思考，学习和碎碎念的一隅~~
+- **头像**: [点击查看](https://deepseek.com/favicon.ico)
+- **GitHub**: [BoredDream](https://github.com/BoredDream)
+
+<style>
+.link-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.link-favicon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 4px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  padding: 2px;
+  background-color: white;
+}
+
+.link-content {
+  flex: 1;
+}
+
+.link-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.link-url {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.link-description {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.favicon-error {
+  border-color: #ffcccc;
+  background-color: #fff5f5;
+}
+
+.link-category {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 20px;
+  color: #333;
+}
+
+.no-favicon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  color: #999;
+  font-size: 12px;
+  border: 1px solid #eee;
+}
+
+.no-favicon.show {
+  display: inline-flex;
+}
+</style>
+
+## 友链列表
+
+<div class="link-category">技术社区</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=github.com&sz=32" alt="GitHub favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">GH</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="link-url">https://github.com</div>
+    <div class="link-description">全球最大的代码托管和协作平台</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=32" alt="Stack Overflow favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">SO</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://stackoverflow.com" target="_blank" rel="noopener">Stack Overflow</a>
+    </div>
+    <div class="link-url">https://stackoverflow.com</div>
+    <div class="link-description">程序员问答社区</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=juejin.cn&sz=32" alt="掘金 favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">掘</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://juejin.cn" target="_blank" rel="noopener">掘金</a>
+    </div>
+    <div class="link-url">https://juejin.cn</div>
+    <div class="link-description">高质量技术社区</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=www.v2ex.com&sz=32" alt="V2EX favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">V2</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://www.v2ex.com" target="_blank" rel="noopener">V2EX</a>
+    </div>
+    <div class="link-url">https://www.v2ex.com</div>
+    <div class="link-description">创意工作者社区</div>
+  </div>
+</div>
+
+<div class="link-category">博客与文档</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=hexo.io&sz=32" alt="Hexo favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">HX</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+    </div>
+    <div class="link-url">https://hexo.io</div>
+    <div class="link-description">快速、简洁且高效的博客框架</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=theme-next.org&sz=32" alt="Next主题 favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">NT</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://theme-next.org" target="_blank" rel="noopener">Next主题</a>
+    </div>
+    <div class="link-url">https://theme-next.org</div>
+    <div class="link-description">优雅的Hexo主题</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=developer.mozilla.org&sz=32" alt="MDN Web Docs favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">MD</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a>
+    </div>
+    <div class="link-url">https://developer.mozilla.org</div>
+    <div class="link-description">Web技术文档</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=www.ruanyifeng.com&sz=32" alt="阮一峰的网络日志 favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">阮</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://www.ruanyifeng.com/blog" target="_blank" rel="noopener">阮一峰的网络日志</a>
+    </div>
+    <div class="link-url">https://www.ruanyifeng.com/blog</div>
+    <div class="link-description">知名技术博客</div>
+  </div>
+</div>
+
+<div class="link-category">工具与资源</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=32" alt="DeepSeek favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">DS</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://deepseek.com" target="_blank" rel="noopener">DeepSeek</a>
+    </div>
+    <div class="link-url">https://deepseek.com</div>
+    <div class="link-description">深度求索AI公司</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=caniuse.com&sz=32" alt="Can I use favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">CI</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://caniuse.com" target="_blank" rel="noopener">Can I use</a>
+    </div>
+    <div class="link-url">https://caniuse.com</div>
+    <div class="link-description">浏览器兼容性查询</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=regex101.com&sz=32" alt="正则表达式测试 favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">RE</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://regex101.com" target="_blank" rel="noopener">正则表达式测试</a>
+    </div>
+    <div class="link-url">https://regex101.com</div>
+    <div class="link-description">在线正则表达式测试工具</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=jsonformatter.org&sz=32" alt="JSON格式化 favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">JS</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://jsonformatter.org" target="_blank" rel="noopener">JSON格式化</a>
+    </div>
+    <div class="link-url">https://jsonformatter.org</div>
+    <div class="link-description">JSON格式化与验证工具</div>
+  </div>
+</div>
+
+<div class="link-category">友情博客</div>
+
+<div class="link-item">
+  <div class="no-favicon" style="display: inline-flex;">?</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="#" onclick="return false;">期待您的博客加入！</a>
+    </div>
+    <div class="link-url">等待添加</div>
+    <div class="link-description">欢迎交换友情链接</div>
+  </div>
+</div>
+
+---
+
+**友链申请要求**:
+1. 网站内容健康、积极向上
+2. 网站能正常访问
+3. 已添加本站链接
+4. 定期更新维护
+
+**申请格式**:
+```
+网站名称:
+网站地址:
+网站描述:
+头像地址:
+```
+
+<script>
+// 增强favicon加载处理
+document.addEventListener('DOMContentLoaded', function() {
+  const favicons = document.querySelectorAll('.link-favicon');
+  
+  favicons.forEach(favicon => {
+    // 检查图片是否已经加载失败
+    if (favicon.complete && favicon.naturalHeight === 0) {
+      // 图片加载失败
+      favicon.style.display = 'none';
+      const noFavicon = favicon.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.add('show');
+      }
+    }
+    
+    // 添加加载成功监听
+    favicon.addEventListener('load', function() {
+      this.style.display = 'block';
+      const noFavicon = this.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.remove('show');
+      }
+    });
+    
+    // 添加加载失败监听（备用）
+    favicon.addEventListener('error', function() {
+      this.style.display = 'none';
+      const noFavicon = this.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.add('show');
+      }
+    });
+  });
+});
+</script>
