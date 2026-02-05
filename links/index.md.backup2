@@ -1,0 +1,180 @@
+---
+title: 友情链接
+date: 2026-01-21 21:35:16
+comments: false
+sidebar: false
+---
+
+# 友情链接
+
+欢迎来到友链页面！这里是我的朋友们的小天地，也欢迎交换友链。
+
+## 我的信息
+
+- **网站名称**: 无忧乡
+- **网站地址**: http://hzauer.com
+- **网站描述**: 记录着农专CS生思考，学习和碎碎念的一隅~~
+- **头像**: [点击查看](https://deepseek.com/favicon.ico)
+- **GitHub**: [BoredDream](https://github.com/BoredDream)
+
+<style>
+.link-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.link-favicon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 4px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  padding: 2px;
+  background-color: white;
+}
+
+.link-content {
+  flex: 1;
+}
+
+.link-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.link-url {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.link-description {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.favicon-error {
+  border-color: #ffcccc;
+  background-color: #fff5f5;
+}
+
+.link-category {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 20px;
+  color: #333;
+}
+
+.no-favicon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  color: #999;
+  font-size: 12px;
+  border: 1px solid #eee;
+}
+
+.no-favicon.show {
+  display: inline-flex;
+}
+</style>
+
+## 友链列表
+
+<div class="link-category">我的朋友</div>
+
+<div class="link-item">
+  <img src="https://www.google.com/s2/favicons?domain=srve.cn&sz=32" alt="srve.cn favicon" class="link-favicon" onerror="this.style.display='none'; this.nextElementSibling.classList.add('show');">
+  <div class="no-favicon">和</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="https://srve.cn" target="_blank" rel="noopener">srve.cn</a>
+    </div>
+    <div class="link-url">https://srve.cn</div>
+    <div class="link-description">和尚的博客</div>
+  </div>
+</div>
+
+<div class="link-item">
+  <div class="no-favicon" style="display: inline-flex;">?</div>
+  <div class="link-content">
+    <div class="link-title">
+      <a href="#" onclick="return false;">期待您的博客加入！</a>
+    </div>
+    <div class="link-url">等待添加</div>
+    <div class="link-description">欢迎交换友情链接</div>
+  </div>
+</div>
+
+---
+
+**友链申请要求**:
+1. 个人博客或独立网站
+2. 内容健康、积极向上
+3. 网站能正常访问
+4. 已添加本站链接
+5. 定期更新维护
+
+**申请格式**:
+```
+网站名称:
+网站地址:
+网站描述:
+头像地址:
+```
+
+<script>
+// 增强favicon加载处理
+document.addEventListener('DOMContentLoaded', function() {
+  const favicons = document.querySelectorAll('.link-favicon');
+  
+  favicons.forEach(favicon => {
+    // 检查图片是否已经加载失败
+    if (favicon.complete && favicon.naturalHeight === 0) {
+      // 图片加载失败
+      favicon.style.display = 'none';
+      const noFavicon = favicon.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.add('show');
+      }
+    }
+    
+    // 添加加载成功监听
+    favicon.addEventListener('load', function() {
+      this.style.display = 'block';
+      const noFavicon = this.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.remove('show');
+      }
+    });
+    
+    // 添加加载失败监听（备用）
+    favicon.addEventListener('error', function() {
+      this.style.display = 'none';
+      const noFavicon = this.nextElementSibling;
+      if (noFavicon && noFavicon.classList.contains('no-favicon')) {
+        noFavicon.classList.add('show');
+      }
+    });
+  });
+});
+</script>
