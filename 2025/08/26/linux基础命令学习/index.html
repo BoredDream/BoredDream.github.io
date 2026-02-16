@@ -440,6 +440,388 @@
   
 
   
+<style>
+/* ============================================
+   全局视觉升级 - 现代化毛玻璃设计
+   应用到所有页面：首页、归档、文章等
+   ============================================ */
 
+/* CSS变量系统 - 支持亮色/暗色模式 */
+:root {
+  /* 亮色模式变量 */
+  --bg-primary: #f8fafc; /* 极浅蓝灰色背景 */
+  --bg-secondary: rgba(255, 255, 255, 0.85); /* 卡片背景 - 带透明度 */
+  --bg-tertiary: rgba(248, 250, 252, 0.7); /* 特殊区域背景 */
+  --text-primary: #1e293b; /* 主要文字 - 深蓝灰色 */
+  --text-secondary: #64748b; /* 次要文字 - 中蓝灰色 */
+  --text-tertiary: #94a3b8; /* 辅助文字 - 浅蓝灰色 */
+  --border-color: rgba(226, 232, 240, 0.6); /* 边框颜色 - 半透明 */
+  --shadow-color: rgba(15, 23, 42, 0.08); /* 阴影颜色 */
+  --accent-color: #3b82f6; /* 强调色 - 蓝色 */
+  --accent-hover: #2563eb; /* 强调色悬停 */
+  
+  /* 渐变背景配置 */
+  --gradient-center: rgba(120, 119, 198, 0.05); /* 中心渐变颜色 */
+  --gradient-edge: transparent; /* 边缘渐变颜色 */
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 暗色模式变量 */
+    --bg-primary: #1a1c22; /* 深蓝黑色背景 */
+    --bg-secondary: rgba(30, 41, 59, 0.7); /* 卡片背景 - 深蓝灰色带透明度 */
+    --bg-tertiary: rgba(30, 41, 59, 0.5); /* 特殊区域背景 */
+    --text-primary: #e1e1e1; /* 主要文字 - 淡灰白色（避免刺眼） */
+    --text-secondary: #cbd5e1; /* 次要文字 - 浅蓝灰色 */
+    --text-tertiary: #94a3b8; /* 辅助文字 - 中蓝灰色 */
+    --border-color: rgba(51, 65, 85, 0.5); /* 边框颜色 - 半透明深蓝灰色 */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 - 深色 */
+    --accent-color: #60a5fa; /* 强调色 - 亮蓝色 */
+    --accent-hover: #93c5fd; /* 强调色悬停 */
+    
+    /* 暗色模式渐变背景 */
+    --gradient-center: rgba(99, 102, 241, 0.1); /* 中心渐变颜色 - 蓝色调 */
+    --gradient-edge: transparent; /* 边缘渐变颜色 */
+  }
+}
+
+/* 全局页面背景 - 应用到所有页面 */
+body {
+  /* 全局固定背景 - 消除贴片感和断层问题 */
+  background: 
+    /* 主渐变层 - 覆盖整个视口 */
+    radial-gradient(
+      circle at 50% 50%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 70%
+    ),
+    /* 辅助渐变层 - 增强视觉效果 */
+    radial-gradient(
+      circle at 20% 80%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    /* 基础背景色 */
+    var(--bg-primary) !important;
+  
+  /* 关键修复：确保背景固定且覆盖整个视口 */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  
+  /* 确保内容区域不会破坏背景连续性 */
+  position: relative;
+}
+
+/* 为内容区域添加轻微的背景层，增强毛玻璃效果 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* 暗色模式背景优化 */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(99, 102, 241, 0.05) 0%,
+        transparent 50%
+      );
+  }
+}
+
+/* ============================================
+   首页和归档页面特定样式
+   ============================================ */
+
+/* 文章卡片/列表项 - 毛玻璃效果 */
+.post-block,
+.posts-collapse .post-content,
+.posts-expand .post-block,
+.archive .post-block,
+.category .post-block,
+.tag .post-block {
+  background: var(--bg-secondary) !important;
+  backdrop-filter: blur(8px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(180%) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid var(--border-color) !important;
+  
+  /* 多层阴影增强深度感 */
+  box-shadow: 
+    0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 文章卡片悬停效果 */
+.post-block:hover,
+.posts-collapse .post-content:hover,
+.posts-expand .post-block:hover,
+.archive .post-block:hover,
+.category .post-block:hover,
+.tag .post-block:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--accent-color) !important;
+  
+  /* 悬停时增强阴影和发光效果 */
+  box-shadow: 
+    0 20px 25px -5px var(--shadow-color),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 30px rgba(99, 102, 241, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 暗色模式悬停发光增强 */
+@media (prefers-color-scheme: dark) {
+  .post-block:hover,
+  .posts-collapse .post-content:hover,
+  .posts-expand .post-block:hover,
+  .archive .post-block:hover,
+  .category .post-block:hover,
+  .tag .post-block:hover {
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.5),
+      0 10px 10px -5px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(99, 102, 241, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+/* 文章标题样式 */
+.posts-expand .post-title,
+.posts-collapse .post-title,
+.archive .post-title,
+.category .post-title,
+.tag .post-title {
+  color: var(--text-primary) !important;
+}
+
+.posts-expand .post-title-link,
+.posts-collapse .post-title-link,
+.archive .post-title-link,
+.category .post-title-link,
+.tag .post-title-link {
+  color: var(--text-primary) !important;
+  transition: color 0.2s ease !important;
+}
+
+.posts-expand .post-title-link:hover,
+.posts-collapse .post-title-link:hover,
+.archive .post-title-link:hover,
+.category .post-title-link:hover,
+.tag .post-title-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* 文章元信息（日期、分类、标签） */
+.post-meta,
+.posts-collapse .post-meta,
+.posts-expand .post-meta {
+  color: var(--text-secondary) !important;
+}
+
+.post-category,
+.post-tag {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.post-category:hover,
+.post-tag:hover {
+  background: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-color) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 分页样式 */
+.pagination {
+  background: var(--bg-secondary) !important;
+  backdrop-filter: blur(8px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(180%) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 
+    0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.page-number,
+.extend {
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.page-number:hover,
+.extend:hover,
+.page-number.current {
+  background: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* 归档页面时间线样式 */
+.posts-collapse {
+  margin-left: 0 !important;
+}
+
+.posts-collapse .collection-title {
+  color: var(--text-primary) !important;
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+.posts-collapse .collection-year {
+  color: var(--accent-color) !important;
+}
+
+/* 移动端性能优化：减少渐变复杂度 */
+@media (max-width: 768px) {
+  body {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        var(--gradient-center) 0%,
+        var(--gradient-edge) 70%
+      ),
+      var(--bg-primary) !important;
+  }
+  
+  .post-block,
+  .posts-collapse .post-content,
+  .posts-expand .post-block,
+  .archive .post-block,
+  .category .post-block,
+  .tag .post-block {
+    padding: 20px !important;
+    backdrop-filter: blur(6px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(6px) saturate(160%) !important;
+  }
+}
+
+/* 针对不支持 fixed 背景的浏览器的回退方案 */
+@supports not (background-attachment: fixed) {
+  body {
+    background-attachment: scroll !important;
+    background-size: 100% auto !important;
+  }
+  
+  /* 简化渐变以改善性能 */
+  body::before {
+    display: none;
+  }
+}
+
+/* 针对不支持毛玻璃效果的浏览器的回退方案 */
+@supports not (backdrop-filter: blur(8px)) and not (-webkit-backdrop-filter: blur(8px)) {
+  .post-block,
+  .posts-collapse .post-content,
+  .posts-expand .post-block,
+  .archive .post-block,
+  .category .post-block,
+  .tag .post-block,
+  .pagination {
+    background: var(--bg-primary) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* 高性能模式：当检测到低端设备时简化效果 */
+@media (prefers-reduced-motion: reduce) {
+  .post-block,
+  .posts-collapse .post-content,
+  .posts-expand .post-block,
+  .archive .post-block,
+  .category .post-block,
+  .tag .post-block,
+  .pagination {
+    transition: none !important;
+  }
+  
+  body::before {
+    display: none;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .post-block,
+  .posts-collapse .post-content,
+  .posts-expand .post-block,
+  .archive .post-block,
+  .category .post-block,
+  .tag .post-block,
+  .pagination {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+}
+</style>
+
+<script>
+// 确保CSS变量在页面加载后立即应用
+document.addEventListener('DOMContentLoaded', function() {
+  // 添加一个类来触发可能的过渡效果
+  document.body.classList.add('visual-upgrade-loaded');
+  
+  // 检查暗色模式并添加相应类
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.add('light-mode');
+  }
+  
+  // 监听暗色模式变化
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (e.matches) {
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,804 @@
+---
+title: 个人资料
+date: 2026-01-22 18:14:23
+comments: false
+sidebar: false
+---
+
+<style>
+/* ============================================
+   个人资料页面视觉升级 - 现代化毛玻璃设计
+   与友链页面保持设计语言一致
+   ============================================ */
+
+/* CSS变量系统 - 与友链页面保持一致 */
+:root {
+  /* 亮色模式变量 */
+  --bg-primary: #f8fafc; /* 极浅蓝灰色背景 */
+  --bg-secondary: rgba(255, 255, 255, 0.85); /* 卡片背景 - 带透明度 */
+  --bg-tertiary: rgba(248, 250, 252, 0.7); /* 特殊区域背景 */
+  --text-primary: #1e293b; /* 主要文字 - 深蓝灰色 */
+  --text-secondary: #64748b; /* 次要文字 - 中蓝灰色 */
+  --text-tertiary: #94a3b8; /* 辅助文字 - 浅蓝灰色 */
+  --border-color: rgba(226, 232, 240, 0.6); /* 边框颜色 - 半透明 */
+  --shadow-color: rgba(15, 23, 42, 0.08); /* 阴影颜色 */
+  --accent-color: #3b82f6; /* 强调色 - 蓝色 */
+  --accent-hover: #2563eb; /* 强调色悬停 */
+  
+  /* 技能标签颜色 - 莫兰迪色系 */
+  --skill-tag-bg: rgba(203, 213, 225, 0.7); /* 技能标签背景 */
+  --skill-tag-text: #475569; /* 技能标签文字 */
+  --skill-tag-hover: rgba(59, 130, 246, 0.1); /* 技能标签悬停 */
+  
+  /* 社交链接颜色 */
+  --social-bg: rgba(255, 255, 255, 0.9); /* 社交链接背景 */
+  --social-text: #475569; /* 社交链接文字 */
+  --social-hover: rgba(59, 130, 246, 0.1); /* 社交链接悬停 */
+  
+  /* 渐变背景配置 */
+  --gradient-center: rgba(120, 119, 198, 0.05); /* 中心渐变颜色 */
+  --gradient-edge: transparent; /* 边缘渐变颜色 */
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 暗色模式变量 */
+    --bg-primary: #1a1c22; /* 深蓝黑色背景 */
+    --bg-secondary: rgba(30, 41, 59, 0.7); /* 卡片背景 - 深蓝灰色带透明度 */
+    --bg-tertiary: rgba(30, 41, 59, 0.5); /* 特殊区域背景 */
+    --text-primary: #e1e1e1; /* 主要文字 - 淡灰白色（避免刺眼） */
+    --text-secondary: #cbd5e1; /* 次要文字 - 浅蓝灰色 */
+    --text-tertiary: #94a3b8; /* 辅助文字 - 中蓝灰色 */
+    --border-color: rgba(51, 65, 85, 0.5); /* 边框颜色 - 半透明深蓝灰色 */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 - 深色 */
+    --accent-color: #60a5fa; /* 强调色 - 亮蓝色 */
+    --accent-hover: #93c5fd; /* 强调色悬停 */
+    
+    /* 暗色模式技能标签 */
+    --skill-tag-bg: rgba(71, 85, 105, 0.7); /* 技能标签背景 - 深灰蓝色 */
+    --skill-tag-text: #e2e8f0; /* 技能标签文字 - 浅色 */
+    --skill-tag-hover: rgba(96, 165, 250, 0.2); /* 技能标签悬停 */
+    
+    /* 暗色模式社交链接 */
+    --social-bg: rgba(30, 41, 59, 0.8); /* 社交链接背景 */
+    --social-text: #e2e8f0; /* 社交链接文字 */
+    --social-hover: rgba(96, 165, 250, 0.2); /* 社交链接悬停 */
+    
+    /* 暗色模式渐变背景 */
+    --gradient-center: rgba(99, 102, 241, 0.1); /* 中心渐变颜色 - 蓝色调 */
+    --gradient-edge: transparent; /* 边缘渐变颜色 */
+  }
+}
+
+/* 页面整体样式 */
+body {
+  /* 全局固定背景 - 与友链页面保持一致，消除贴片感 */
+  background: 
+    /* 主渐变层 - 覆盖整个视口 */
+    radial-gradient(
+      circle at 50% 50%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 70%
+    ),
+    /* 辅助渐变层 - 增强视觉效果 */
+    radial-gradient(
+      circle at 20% 80%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    /* 基础背景色 */
+    var(--bg-primary) !important;
+  
+  /* 关键修复：确保背景固定且覆盖整个视口 */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  
+  /* 移动端性能优化：减少渐变复杂度 */
+  @media (max-width: 768px) {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        var(--gradient-center) 0%,
+        var(--gradient-edge) 70%
+      ),
+      var(--bg-primary) !important;
+  }
+  
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  
+  /* 确保内容区域不会破坏背景连续性 */
+  position: relative;
+}
+
+/* 为内容区域添加轻微的背景层，增强毛玻璃效果 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* 暗色模式背景优化 */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(99, 102, 241, 0.05) 0%,
+        transparent 50%
+      );
+  }
+}
+
+/* 个人资料容器 */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* 头像区域 - 毛玻璃效果 */
+.profile-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 40px 30px;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 
+    0 8px 16px var(--shadow-color),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 头像区域悬停效果 */
+.profile-header:hover {
+  box-shadow: 
+    0 16px 32px var(--shadow-color),
+    0 0 40px rgba(99, 102, 241, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-color);
+}
+
+/* 暗色模式悬停发光增强 */
+@media (prefers-color-scheme: dark) {
+  .profile-header:hover {
+    box-shadow: 
+      0 16px 32px rgba(0, 0, 0, 0.5),
+      0 0 50px rgba(99, 102, 241, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--border-color);
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-secondary);
+}
+
+.avatar-img:hover {
+  transform: scale(1.08);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.15);
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-tagline {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* 主要内容区域 */
+.profile-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  margin-top: 20px;
+}
+
+/* 卡片样式 - 毛玻璃效果 */
+.profile-card {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  
+  /* 多层阴影增强深度感 */
+  box-shadow: 
+    0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* 卡片悬停效果 */
+.profile-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  
+  /* 悬停时增强阴影和发光效果 */
+  box-shadow: 
+    0 20px 25px -5px var(--shadow-color),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 30px rgba(99, 102, 241, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* 暗色模式悬停发光增强 */
+@media (prefers-color-scheme: dark) {
+  .profile-card:hover {
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.5),
+      0 10px 10px -5px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(99, 102, 241, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--text-primary);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* 基本信息网格 */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.info-value a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.info-value a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* 技能标签 */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: var(--skill-tag-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--skill-tag-text);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: var(--skill-tag-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+  border-color: var(--accent-color);
+}
+
+/* 关于我内容 */
+.about-content {
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.about-content p {
+  margin: 0 0 16px 0;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* 社交链接 */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--social-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 12px;
+  color: var(--social-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.social-link:hover {
+  background: var(--social-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* 邮箱加载状态 */
+#email-placeholder {
+  color: var(--text-tertiary);
+  font-style: italic;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--bg-tertiary);
+}
+
+#email-placeholder.loading {
+  animation: pulse 1.5s infinite;
+}
+
+#email-placeholder:hover {
+  color: var(--accent-color);
+  background: var(--skill-tag-hover);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px 15px;
+  }
+  
+  .profile-header {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .avatar-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+  
+  .profile-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .profile-card {
+    padding: 24px;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+  }
+  
+  .info-value {
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .social-link {
+    min-width: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 24px 16px;
+    margin-bottom: 32px;
+  }
+  
+  .avatar-img {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+  
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  
+  .profile-tagline {
+    font-size: 1rem;
+  }
+  
+  .profile-card {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  
+  .skill-tags {
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .about-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .social-link {
+    padding: 10px 16px;
+  }
+}
+
+/* 浏览器不支持毛玻璃效果的回退 */
+@supports not (backdrop-filter: blur(8px)) and not (-webkit-backdrop-filter: blur(8px)) {
+  .profile-header,
+  .profile-card,
+  .social-link,
+  .skill-tag {
+    background: var(--bg-primary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* 针对不支持 fixed 背景的浏览器的回退方案 */
+@supports not (background-attachment: fixed) {
+  body {
+    background-attachment: scroll !important;
+    background-size: 100% auto !important;
+  }
+  
+  /* 简化渐变以改善性能 */
+  body::before {
+    display: none;
+  }
+}
+
+/* 高性能模式：当检测到低端设备时简化效果 */
+@media (prefers-reduced-motion: reduce) {
+  .link-card,
+  .profile-card,
+  .profile-header {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  body::before {
+    display: none;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  .profile-header,
+  .profile-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  .profile-name {
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+    color: #000 !important;
+  }
+}
+</style>
+
+{% raw %}
+<div class="profile-container">
+  <!-- 头像和基本信息区域 -->
+  <div class="profile-header">
+    <div class="profile-avatar">
+      <img src="https://deepseek.com/favicon.ico" alt="DuKou" class="avatar-img">
+      <h1 class="profile-name">DuKou</h1>
+      <p class="profile-tagline">CS学生 | 博客作者 | 技术爱好者</p>
+    </div>
+  </div>
+
+  <!-- 主要内容区域 -->
+  <div class="profile-content">
+    <!-- 基本信息卡片 -->
+    <div class="profile-card">
+      <h2 class="card-title">基本信息</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">职业</span>
+          <span class="info-value">计算机科学学生</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">地点</span>
+          <span class="info-value">中国</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">邮箱</span>
+          <span class="info-value" id="email-placeholder">加载中...</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">GitHub</span>
+          <span class="info-value">
+            <a href="https://github.com/BoredDream" target="_blank" rel="noopener">BoredDream</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技能标签区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">技能标签</h2>
+      <div class="skill-tags">
+        <span class="skill-tag">编程</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">Hexo</span>
+        <span class="skill-tag">Markdown</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Shell脚本</span>
+      </div>
+    </div>
+
+    <!-- 关于我区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">关于我</h2>
+      <div class="about-content">
+        <p>你好！我是DuKou，一名对计算机科学充满热情的学生。</p>
+        <p>目前正在学习各种编程技术，特别喜欢探索Linux系统、Web开发和开源工具。通过这个博客记录我的学习历程、技术思考和日常碎碎念。</p>
+        <p>我相信技术应该服务于人，希望通过不断学习，能够创造出有价值的东西。除了编程，我也喜欢阅读、写作和探索新技术趋势。</p>
+        <p>欢迎通过GitHub或邮箱与我交流技术问题！</p>
+      </div>
+    </div>
+
+    <!-- 社交链接区域 -->
+    <div class="profile-card">
+      <h2 class="card-title">社交链接</h2>
+      <div class="social-links">
+        <a href="https://github.com/BoredDream" class="social-link" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="#" class="social-link" id="email-link">
+          <i class="fas fa-envelope"></i>
+          <span>邮箱</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endraw %}
+
+<script>
+// 防爬虫邮箱处理
+document.addEventListener('DOMContentLoaded', function() {
+  // 邮箱配置（使用防爬虫格式）
+  const encodedEmail = 'boreddream[at]qq[dot]com';
+  
+  // 解码邮箱函数
+  function decodeEmail(encoded) {
+    return encoded
+      .replace(/\[at\]/g, '@')
+      .replace(/\[dot\]/g, '.');
+  }
+  
+  // 获取DOM元素
+  const emailPlaceholder = document.getElementById('email-placeholder');
+  const emailLink = document.getElementById('email-link');
+  
+  // 解码真实邮箱
+  const realEmail = decodeEmail(encodedEmail);
+  
+  // 显示邮箱（延迟显示以增强防爬虫效果）
+  setTimeout(function() {
+    if (emailPlaceholder) {
+      emailPlaceholder.textContent = realEmail;
+      emailPlaceholder.classList.remove('loading');
+    }
+    
+    // 设置邮箱链接
+    if (emailLink) {
+      emailLink.href = 'mailto:' + realEmail;
+      emailLink.addEventListener('click', function(e) {
+        // 添加点击确认（可选）
+        if (!confirm('确定要发送邮件到 ' + realEmail + ' 吗？')) {
+          e.preventDefault();
+        }
+      });
+    }
+  }, 1000); // 1秒延迟
+  
+  // 添加复制邮箱功能
+  emailPlaceholder.addEventListener('click', function() {
+    navigator.clipboard.writeText(realEmail).then(function() {
+      const originalText = emailPlaceholder.textContent;
+      emailPlaceholder.textContent = '已复制到剪贴板！';
+      emailPlaceholder.style.color = '#27ae60';
+      
+      setTimeout(function() {
+        emailPlaceholder.textContent = originalText;
+        emailPlaceholder.style.color = '';
+      }, 2000);
+    }).catch(function(err) {
+      console.error('复制失败:', err);
+      alert('复制失败，请手动复制邮箱地址');
+    });
+  });
+  
+  // 添加复制提示
+  emailPlaceholder.title = '点击复制邮箱地址';
+  emailPlaceholder.style.cursor = 'pointer';
+  
+  // 初始显示加载状态
+  emailPlaceholder.classList.add('loading');
+});
+
+// 防止右键查看源代码（增强保护）
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.id === 'email-placeholder' || e.target.id === 'email-link') {
+    e.preventDefault();
+    alert('邮箱地址已受保护，请通过点击复制功能获取');
+  }
+});
+
+// 防止键盘快捷键查看源代码
+document.addEventListener('keydown', function(e) {
+  // 阻止 Ctrl+U 查看源代码
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+  }
+  
+  // 阻止 F12 开发者工具
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+});
+</script>

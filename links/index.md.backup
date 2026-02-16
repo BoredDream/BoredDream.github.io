@@ -1,0 +1,669 @@
+---
+title: 友情链接
+date: 2026-01-21 21:35:16
+comments: false
+sidebar: false
+---
+
+# 友情链接
+
+欢迎来到友链页面！这里是我收藏的一些优质博客网站，也欢迎交换友链。
+
+## 我的信息
+
+- **网站名称**: 无忧乡
+- **网站地址**: http://hzauer.com
+- **网站描述**: 记录着农专CS生思考，学习和碎碎念的一隅~~
+- **头像**: [点击查看](https://deepseek.com/favicon.ico)
+- **GitHub**: [BoredDream](https://github.com/BoredDream)
+
+<style>
+/* ============================================
+   友链页面视觉升级 - 现代化毛玻璃设计
+   支持亮色/暗色模式自动适配
+   ============================================ */
+
+/* CSS变量系统 - 支持亮色/暗色模式 */
+:root {
+  /* 亮色模式变量 */
+  --bg-primary: #f8fafc; /* 极浅蓝灰色背景 */
+  --bg-secondary: rgba(255, 255, 255, 0.85); /* 卡片背景 - 带透明度 */
+  --bg-tertiary: rgba(248, 250, 252, 0.7); /* 申请区域背景 */
+  --text-primary: #1e293b; /* 主要文字 - 深蓝灰色 */
+  --text-secondary: #64748b; /* 次要文字 - 中蓝灰色 */
+  --text-tertiary: #94a3b8; /* 辅助文字 - 浅蓝灰色 */
+  --border-color: rgba(226, 232, 240, 0.6); /* 边框颜色 - 半透明 */
+  --shadow-color: rgba(15, 23, 42, 0.08); /* 阴影颜色 */
+  --accent-color: #3b82f6; /* 强调色 - 蓝色 */
+  --accent-hover: #2563eb; /* 强调色悬停 */
+  
+  /* 莫兰迪色系标签 - 低饱和度高明度 */
+  --tag-tech: #cbd5e1; /* 技术标签 - 浅灰蓝色 */
+  --tag-life: #e2e8f0; /* 生活标签 - 极浅灰蓝色 */
+  --tag-creative: #ddd6fe; /* 创意标签 - 淡紫色 */
+  --tag-study: #bbf7d0; /* 学习标签 - 淡绿色 */
+  --tag-text: #475569; /* 标签文字颜色 */
+  
+  /* 渐变背景配置 */
+  --gradient-center: rgba(120, 119, 198, 0.05); /* 中心渐变颜色 */
+  --gradient-edge: transparent; /* 边缘渐变颜色 */
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 暗色模式变量 */
+    --bg-primary: #1a1c22; /* 深蓝黑色背景 - 你的建议 */
+    --bg-secondary: rgba(30, 41, 59, 0.7); /* 卡片背景 - 深蓝灰色带透明度 */
+    --bg-tertiary: rgba(30, 41, 59, 0.5); /* 申请区域背景 */
+    --text-primary: #e1e1e1; /* 主要文字 - 淡灰白色（避免刺眼） */
+    --text-secondary: #cbd5e1; /* 次要文字 - 浅蓝灰色 */
+    --text-tertiary: #94a3b8; /* 辅助文字 - 中蓝灰色 */
+    --border-color: rgba(51, 65, 85, 0.5); /* 边框颜色 - 半透明深蓝灰色 */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* 阴影颜色 - 深色 */
+    --accent-color: #60a5fa; /* 强调色 - 亮蓝色 */
+    --accent-hover: #93c5fd; /* 强调色悬停 */
+    
+    /* 暗色模式莫兰迪色系标签 - 低饱和度 */
+    --tag-tech: #475569; /* 技术标签 - 深灰蓝色 */
+    --tag-life: #64748b; /* 生活标签 - 中灰蓝色 */
+    --tag-creative: #5b21b6; /* 创意标签 - 深紫色 */
+    --tag-study: #065f46; /* 学习标签 - 深绿色 */
+    --tag-text: #e2e8f0; /* 标签文字颜色 - 浅色 */
+    
+    /* 暗色模式渐变背景 */
+    --gradient-center: rgba(99, 102, 241, 0.1); /* 中心渐变颜色 - 蓝色调 */
+    --gradient-edge: transparent; /* 边缘渐变颜色 */
+  }
+}
+
+/* 页面整体样式 */
+body {
+  /* 全局固定背景 - 消除贴片感和断层问题 */
+  background: 
+    /* 主渐变层 - 覆盖整个视口 */
+    radial-gradient(
+      circle at 50% 50%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 70%
+    ),
+    /* 辅助渐变层 - 增强视觉效果 */
+    radial-gradient(
+      circle at 20% 80%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--gradient-center) 0%,
+      var(--gradient-edge) 40%
+    ),
+    /* 基础背景色 */
+    var(--bg-primary) !important;
+  
+  /* 关键修复：确保背景固定且覆盖整个视口 */
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  
+  /* 移动端性能优化：减少渐变复杂度 */
+  @media (max-width: 768px) {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        var(--gradient-center) 0%,
+        var(--gradient-edge) 70%
+      ),
+      var(--bg-primary) !important;
+  }
+  
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  
+  /* 确保内容区域不会破坏背景连续性 */
+  position: relative;
+}
+
+/* 为内容区域添加轻微的背景层，增强毛玻璃效果 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+/* 暗色模式背景优化 */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background: 
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(99, 102, 241, 0.05) 0%,
+        transparent 50%
+      );
+  }
+}
+
+/* 卡片式网格布局 */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+/* 友链卡片 - 毛玻璃效果 */
+.link-card {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  /* 多层阴影增强深度感 */
+  box-shadow: 
+    0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* 卡片悬停效果 */
+.link-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  
+  /* 悬停时增强阴影和发光效果 */
+  box-shadow: 
+    0 20px 25px -5px var(--shadow-color),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 30px rgba(99, 102, 241, 0.2), /* 蓝色发光效果 */
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* 暗色模式悬停发光增强 */
+@media (prefers-color-scheme: dark) {
+  .link-card:hover {
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.5),
+      0 10px 10px -5px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(99, 102, 241, 0.3), /* 增强蓝色发光 */
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* 卡片头部 */
+.link-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* 头像样式 */
+.link-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 18px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-secondary);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.link-avatar:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-color);
+}
+
+/* 链接信息 */
+.link-info {
+  flex: 1;
+}
+
+.link-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.link-name a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-name a:hover {
+  color: var(--accent-color);
+}
+
+.link-url {
+  font-size: 13px;
+  color: var(--text-secondary);
+  word-break: break-all;
+  margin-bottom: 6px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.link-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+/* 标签容器 */
+.link-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* 标签样式 - 莫兰迪色系 */
+.link-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* 技术标签 */
+.link-tag.tech {
+  background: var(--tag-tech);
+  color: var(--tag-text);
+}
+
+.link-tag.tech:hover {
+  background: color-mix(in srgb, var(--tag-tech) 90%, var(--accent-color) 10%);
+  transform: translateY(-2px);
+}
+
+/* 生活标签 */
+.link-tag.life {
+  background: var(--tag-life);
+  color: var(--tag-text);
+}
+
+.link-tag.life:hover {
+  background: color-mix(in srgb, var(--tag-life) 90%, var(--accent-color) 10%);
+  transform: translateY(-2px);
+}
+
+/* 创意标签 */
+.link-tag.creative {
+  background: var(--tag-creative);
+  color: var(--tag-text);
+}
+
+.link-tag.creative:hover {
+  background: color-mix(in srgb, var(--tag-creative) 90%, var(--accent-color) 10%);
+  transform: translateY(-2px);
+}
+
+/* 学习标签 */
+.link-tag.study {
+  background: var(--tag-study);
+  color: var(--tag-text);
+}
+
+.link-tag.study:hover {
+  background: color-mix(in srgb, var(--tag-study) 90%, var(--accent-color) 10%);
+  transform: translateY(-2px);
+}
+
+/* 备用头像 */
+.no-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  border: 2px solid var(--border-color);
+}
+
+/* 空状态提示 */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-tertiary);
+  grid-column: 1 / -1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.empty-state h3 {
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.empty-state p {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .link-card {
+    padding: 20px;
+  }
+  
+  .link-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .no-avatar {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* 友链申请区域 */
+.apply-section {
+  background: var(--bg-tertiary);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 48px;
+  border-left: 4px solid var(--accent-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 
+    0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.apply-section h3 {
+  margin-top: 0;
+  color: var(--text-primary);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.apply-section h4 {
+  color: var(--text-primary);
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.apply-section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.apply-section ul {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.apply-section li {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.apply-section code {
+  background: var(--bg-secondary);
+  padding: 16px;
+  border-radius: 8px;
+  display: block;
+  margin: 20px 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 浏览器不支持毛玻璃效果的回退 */
+@supports not (backdrop-filter: blur(8px)) and not (-webkit-backdrop-filter: blur(8px)) {
+  .link-card,
+  .empty-state,
+  .apply-section {
+    background: var(--bg-primary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* 针对不支持 fixed 背景的浏览器的回退方案 */
+@supports not (background-attachment: fixed) {
+  body {
+    background-attachment: scroll !important;
+    background-size: 100% auto !important;
+  }
+  
+  /* 简化渐变以改善性能 */
+  body::before {
+    display: none;
+  }
+}
+
+/* 高性能模式：当检测到低端设备时简化效果 */
+@media (prefers-reduced-motion: reduce) {
+  .link-card,
+  .profile-card,
+  .profile-header {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  body::before {
+    display: none;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  .link-card,
+  .apply-section {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+}
+</style>
+
+## 友链列表
+
+<div class="links-grid">
+  <!-- 风雨阁博客 -->
+  <div class="link-card">
+    <div class="link-header">
+      <img src="https://www.google.com/s2/favicons?domain=srve.cn&sz=128" alt="风雨阁" class="link-avatar" onerror="this.style.display='none'; this.parentNode.querySelector('.no-avatar').style.display='flex';">
+      <div class="no-avatar" style="display: none;">风</div>
+      <div class="link-info">
+        <div class="link-name"><a href="https://srve.cn" target="_blank" rel="noopener">风雨阁</a></div>
+        <div class="link-url">https://srve.cn</div>
+      </div>
+    </div>
+    <div class="link-description">和尚的博客，分享技术、生活和思考。</div>
+    <div class="link-tags">
+      <span class="link-tag tech">技术</span>
+      <span class="link-tag life">生活</span>
+      <span class="link-tag study">学习</span>
+    </div>
+  </div>
+  
+  <!-- 生活随笔博客 -->
+  <div class="link-card">
+    <div class="link-header">
+      <img src="https://www.google.com/s2/favicons?domain=life.example.com&sz=128" alt="生活随笔" class="link-avatar" onerror="this.style.display='none'; this.parentNode.querySelector('.no-avatar').style.display='flex';">
+      <div class="no-avatar" style="display: none;">�</div>
+      <div class="link-info">
+        <div class="link-name"><a href="https://life.example.com" target="_blank" rel="noopener">生活随笔</a></div>
+        <div class="link-url">https://life.example.com</div>
+      </div>
+    </div>
+    <div class="link-description">记录生活点滴的博客</div>
+    <div class=link-tags>
+      <span class="link-tag life">生活</span>
+      <span class="link-tag creative">创意</span>
+    </div>
+  </div>
+
+  <!-- Hexo官方博客 -->
+  <div class="link-card">
+    <div class="link-header">
+      <img src="https://www.google.com/s2/favicons?domain=hexo.io&sz=128" alt="Hexo官方" class="link-avatar" onerror="this.style.display='none'; this.parentNode.querySelector('.no-avatar').style.display='flex';">
+      <div class="no-avatar" style="display: none;">H</div>
+      <div class="link-info">
+        <div class="link-name"><a href="https://hexo.io" target="_blank" rel="noopener">Hexo官方</a></div>
+        <div class="link-url">https://hexo.io</div>
+      </div>
+    </div>
+    <div class="link-description">快速、简洁且高效的博客框架</div>
+    <div class=link-tags>
+      <span class="link-tag tech">技术</span>
+      <span class="link-tag">工具</span>
+    </div>
+  </div>
+
+  <!-- 这里可以继续添加更多友链卡片 -->
+  <!-- 示例卡片结构：
+  <div class="link-card">
+    <div class="link-header">
+      <img src="头像URL" alt="博客名称" class="link-avatar" onerror="this.style.display='none'; this.parentNode.querySelector('.no-avatar').style.display='flex';">
+      <div class="no-avatar" style="display: none;">博</div>
+      <div class="link-info">
+        <div class="link-name"><a href="博客地址" target="_blank" rel="noopener">博客名称</a></div>
+        <div class="link-url">博客地址</div>
+      </div>
+    </div>
+    <div class="link-description">博客描述内容...</div>
+    <div class="link-tags">
+      <span class="link-tag tech">技术</span>
+      <span class="link-tag life">生活</span>
+    </div>
+  </div>
+  -->
+</div>
+
+<div class="apply-section">
+  <h3>友链申请</h3>
+  
+  <p>欢迎志同道合的朋友交换友链！请确保您的博客符合以下要求：</p>
+  
+  <h4>申请要求</h4>
+  <ul>
+    <li>网站内容健康、积极向上</li>
+    <li>网站能正常访问且定期更新</li>
+    <li>已添加本站链接（<a href="http://hzauer.com" target="_blank">http://hzauer.com</a>）</li>
+    <li>个人独立博客优先</li>
+  </ul>
+  
+  <h4>申请格式</h4>
+  <p>请在评论区或通过邮件提供以下信息：</p>
+  <code>
+网站名称: [您的博客名称]
+网站地址: [您的博客URL]
+网站描述: [简短描述，50字以内]
+头像地址: [头像图片URL，建议正方形]
+标签: [可选，如技术、生活、学习等]
+  </code>
+  
+  <p>审核通过后，您的博客将出现在此页面！</p>
+</div>
+
+<script>
+// 头像加载失败处理
+document.addEventListener('DOMContentLoaded', function() {
+  const avatars = document.querySelectorAll('.link-avatar');
+  
+  avatars.forEach(avatar => {
+    // 检查图片是否已经加载失败
+    if (avatar.complete && avatar.naturalHeight === 0) {
+      // 图片加载失败，显示备用头像
+      avatar.style.display = 'none';
+      const noAvatar = avatar.parentNode.querySelector('.no-avatar');
+      if (noAvatar) {
+        noAvatar.style.display = 'flex';
+        // 设置备用头像的首字母
+        const linkName = avatar.parentNode.querySelector('.link-name');
+        if (linkName) {
+          const text = linkName.textContent || linkName.innerText;
+          if (text && text.trim()) {
+            noAvatar.textContent = text.trim().charAt(0);
+          }
+        }
+      }
+    }
+    
+    // 添加加载失败监听
+    avatar.addEventListener('error', function() {
+      this.style.display = 'none';
+      const noAvatar = this.parentNode.querySelector('.no-avatar');
+      if (noAvatar) {
+        noAvatar.style.display = 'flex';
+        // 设置备用头像的首字母
+        const linkName = this.parentNode.querySelector('.link-name');
+        if (linkName) {
+          const text = linkName.textContent || linkName.innerText;
+          if (text && text.trim()) {
+            noAvatar.textContent = text.trim().charAt(0);
+          }
+        }
+      }
+    });
+  });
+  
+  // 卡片悬停效果增强
+  const cards = document.querySelectorAll('.link-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.zIndex = '10';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.zIndex = '1';
+    });
+  });
+});
+</script>
